@@ -1,3 +1,17 @@
+/* google fonts */
+.butterfly-kids-regular {
+    font-family: "Butterfly Kids", cursive;
+    font-weight: 400;
+    font-style: normal;
+} /* used for steps */
+.emilys-candy-regular {
+    font-family: "Emilys Candy", serif;
+    font-weight: 400;
+    font-style: normal;
+} /* used for header, snap/stitch */
+
+
+
 html {
   font-size: 14px;
 }
@@ -33,4 +47,32 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+/* the only CSS added above here is the background colouring and fonts, everything else is default when creating MCV website */
+header {
+    font-family: "Emilys Candy", serif;
+    font-size: 1.5rem;
+}
+
+
+#homePage #homePageOne {
+    width: 25%;
+}
+#homePage #homePageTwo {
+    width: 25%;
+}
+#homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#homePage #step {
+    font-size: 3rem;
+    font-family: "Butterfly Kids", cursive;
+}
+#homePage #snapStitch {
+    font-size: 2.5rem;
+    font-family: "Emilys Candy", serif;
 }

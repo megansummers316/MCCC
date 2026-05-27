@@ -119,3 +119,20 @@ h1 {
     font-family: "Butterfly Kids", cursive;
 } /* all page titles */
 
+#contactMe #address {
+    display: flex;
+    flex-direction: column;
+}
+#contactMe label {
+    font-family: "Emilys Candy", serif;
+    font-size: 2rem;
+}
+#contactMe .contactForm {
+    width: 30%;
+    align-items: center;
+    justify-self: center;
+}
+input {
+    font-family: "Butterfly Kids", cursive;
+    font-size: 1.5rem;
+}

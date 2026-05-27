@@ -89,10 +89,6 @@ footer a {
     font-size: 4.5rem;
     font-family: "Emilys Candy", serif;
 }
-#homePage #welcome {
-    font-size: 6rem;
-    font-family: "Butterfly Kids", cursive;
-}
 #homePage #memories {
     font-size: 3rem;
     font-family: "Emilys Candy", serif;
@@ -112,9 +108,14 @@ footer a {
     list-style: none;
     padding-left: 0;
 }
-
 #homePage li::before {
     content: "\2661";
     color: #d46a92;
     margin-right: 10px;
 }
+
+h1 {
+    font-size: 6rem;
+    font-family: "Butterfly Kids", cursive;
+} /* all page titles */
+

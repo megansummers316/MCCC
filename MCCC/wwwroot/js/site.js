@@ -1,21 +1,23 @@
 ﻿//contact page - add another item button
 let addItem = document.querySelector(".newItem");
 function addNewItem() {
-    //confirm all items are completed before adding a new one
+    //confirm last item is completed before adding a new one
     let description = document.getElementsByName("itemDesc");
     let colour = document.getElementsByName("colour");
-    let lastDesc = description[description.length - 1];
-    let lastColour = colour[colour.length - 1];
     let existingError = document.getElementById("itemError");
-    if (lastDesc.value.trim() === "" || lastColour.value.trim() === "") {
-        if (existingError === null) {
-            let errorMessage = document.createElement("p");
-            errorMessage.id = "itemError";
-            errorMessage.textContent = "Please complete the current item before adding a new one!";
-            let itemContainer = document.getElementById("itemContainer");
-            itemContainer.appendChild(errorMessage);
+    let hasEmptyItem = false;
+    for (let i = 0; i < description.length; i++) {
+        if (description[i].value.trim() === "" || colour[i].value.trim() === "") {
+            hasEmptyItem = true;
+            if (existingError === null) {
+                let errorMessage = document.createElement("p");
+                errorMessage.id = "itemError";
+                errorMessage.textContent = "Please complete the current item before adding a new one!";
+                let itemContainer = document.getElementById("itemContainer");
+                itemContainer.appendChild(errorMessage);
+            }
+            return;
         }
-        return;
     }
     //delete any existing errors
     if (existingError !== null) {

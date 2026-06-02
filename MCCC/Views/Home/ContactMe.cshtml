@@ -1,14 +1,14 @@
 ﻿@{
-	ViewData["Title"] = "Contact Me";
+	ViewData["Title"] = "Custom Orders";
 }
 
 <div class="text-center" id="contactMe">
-	<h1 class="display-4">Contact Me</h1>
-	<form class="contactForm" method="post" asp-controller="Home" asp-action="Contact"> 
+	<h1 class="display-4">Custom Orders</h1>
+	<form class="contactForm" method="post" asp-controller="Home" asp-action="Contact" enctype="multipart/form-data"> 
 		<div>
 			<div class="form-group" id="name">
 				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" placeholder="John Smith" />
+				<input type="text" id="name" name="name" placeholder="John Smith" required />
 			</div>
 			<div class="form-group" id="address">
 				<label for="address">Address:</label>
@@ -18,24 +18,30 @@
 			</div> 
 			<div class="form-group" id="email">
 				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" placeholder="johnsmith123@example.com" />
+				<input type="email" id="email" name="email" placeholder="johnsmith123@example.com" required />
 			</div>
 		</div>
-		<div>
-			<div class="form-group" id="itemDesc">
-				<label for="itemDesc">Item Description:</label>
-				<input type="text" id="itemDesc" name="itemDesc" placeholder="Granny Stitch Bucket Hat" />
-			</div>
-			<div class="form-group" id="colour">
-				<label for="colour">Colour(s):</label>
-				<input type="text" id="colour" name="colour" placeholder="Fushia" />
-			</div>
-			<div class="form-group">
-				<button type="button" class="newItem">Add another item</button>
+		<div id="itemContainer">
+			<div class="item">
+				<div class="form-group">
+					<label for="itemDesc">Item Description:</label>
+					<input type="text" name="itemDesc" placeholder="Granny Stitch Bucket Hat" required />
+				</div>
+				<div class="form-group">
+					<label for="colour">Colour(s):</label>
+					<input type="text" name="colour" placeholder="Fushia" required />
+				</div>
+				<div class="form-group">
+					<label for="referencePhoto">Reference Photo:</label>
+					<input type="file" id="referencePhoto" name="referencePhoto" accept="image/*" />
+				</div>
 			</div>
 		</div>
 		<div class="form-group">
-			<button type="submit">Send</button>
+			<button type="button" class="newItem">Add another item</button>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="submit">Send</button>
 		</div>
 	</form>
 </div>

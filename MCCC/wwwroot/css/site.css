@@ -9,6 +9,12 @@
     font-weight: 400;
     font-style: normal;
 } /* used for header, snap/stitch */
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+} /* used for input text */
+
 
 
 
@@ -62,7 +68,7 @@ footer a {
     color: #d46a92;
 }
 
-
+/* HOME PAGE */
 #homePage #homePageOne {
     width: 25%;
 }
@@ -113,12 +119,21 @@ footer a {
     color: #d46a92;
     margin-right: 10px;
 }
+#homePage a {
+    color: black;
+}
+#homePage a:hover {
+    color: #d46a92;
+    text-decoration: none;
+    font-size: 3.5rem;
+}
 
 h1 {
     font-size: 6rem;
     font-family: "Butterfly Kids", cursive;
 } /* all page titles */
 
+/* CONTACT PAGE */
 #contactMe #address {
     display: flex;
     flex-direction: column;
@@ -133,6 +148,16 @@ h1 {
     justify-self: center;
 }
 input {
-    font-family: "Butterfly Kids", cursive;
+    font-family: "Shadows Into Light", cursive;
     font-size: 1.5rem;
+}
+#contactMe .newItem, #contactMe .submit {
+    font-family: "Butterfly Kids", cursive;
+    font-size: 2rem;
+    border: 2px solid #d46a92;
+    background-color: rgba(244, 173, 187, 0.75);
+    border-radius: 10px;
+}
+#contactMe .form-group {
+    margin-bottom: 15px;
 }

@@ -47,12 +47,22 @@ namespace MCCC.Controllers
             string body = "";
             body += $"Name: {name}\n";
             body += $"Email: {email}\n";
-            body += $"Items:\n";
+            body += $"\nAddress:\n";
+            body += $"{address1}\n";
+            body += $"{address2}\n";
+            body += $"{postalCode}\n";
+            body += $"\nItems:\n";
             for (int i = 0; i < itemDesc.Count; i++)
             {
-                body += $"\nItem: {i + 1}\n";
+                body += $"Item: {i + 1}\n";
                 body += $"Description: {itemDesc[i]}\n";
                 body += $"Colour: {colour[i]}\n";
+                if (i < itemPhoto.Count && itemPhoto[i] != null && itemPhoto[i].Length > 0)
+                {
+                    var stream = itemPhoto[i].OpenReadStream();
+                    var attachment = new Attachment(stream, itemPhoto[i].FileName);
+                    message.Attachments.Add(attachment);
+                }
             }
             message.Body = body;
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587);

@@ -56,13 +56,13 @@ body {
 }
 
 /* the only CSS added above here is the background colouring and fonts, everything else is default when creating MCV website */
-header {
+header .title, header li {
     font-family: "Emilys Candy", serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 footer {
     font-family: "Butterfly Kids", cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 footer a {
     color: #d46a92;
@@ -127,6 +127,11 @@ footer a {
     text-decoration: none;
     font-size: 3.5rem;
 }
+#homePage .homeContactLink {
+    color: #FFB7C5;
+    font-size: 3rem;
+    font-family: "Emilys Candy", serif;
+}
 
 h1 {
     font-size: 6rem;
@@ -152,7 +157,7 @@ input {
     font-size: 1.5rem;
 }
 #contactMe .newItem, #contactMe .submit {
-    font-family: "Butterfly Kids", cursive;
+    font-family: "Shadows Into Light", cursive;
     font-size: 2rem;
     border: 2px solid #d46a92;
     background-color: rgba(244, 173, 187, 0.75);

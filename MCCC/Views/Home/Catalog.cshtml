@@ -1,6 +1,7 @@
 ﻿@{
 	ViewData["Title"] = "Catalog";
 }
+@model List<Product>
 
 
 <div class="text-center">
@@ -9,5 +10,13 @@
 
 
 <div class="catalogGrid">
-
+	<p>All prices shown are for that specific product. Prices vary depending on size and customization!</p>
+	@foreach (var item in Model)
+	{
+		<div class="catalogCard">
+			<img src="~/img/items/@item.Image" />
+			<h3>@item.Name</h3>
+			<p>$@item.Price</p>
+		</div>
+	}
 </div>

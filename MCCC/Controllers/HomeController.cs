@@ -5,6 +5,9 @@ using System.Net;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
+using ExcelDataReader;
+using System.Data;
+using MCCC.Models;
 
 namespace MCCC.Controllers
 {
@@ -24,7 +27,23 @@ namespace MCCC.Controllers
 
         public IActionResult Catalog()
         {
-            return View();
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "Data", "catalog.xlsx");
+            List<Product> products = new List<Product>();
+            using var stream = System.IO.File.Open(path, FileMode.Open, FileAccess.Read);
+            using var reader = ExcelReaderFactory.CreateReader(stream);
+            var result = reader.AsDataSet();
+            DataTable table = result.Tables[0];
+            for (int i = 1; i < table.Rows.Count; i++)
+            {
+                products.Add(new Product
+                {
+                    Name = table.Rows[i][0].ToString(),
+                    Price = table.Rows[i][1].ToString(),
+                    Image = table.Rows[i][2].ToString()
+                });
+            }
+            return View(products);
         }
 
         public IActionResult AboutMe()

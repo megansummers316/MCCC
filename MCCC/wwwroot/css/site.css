@@ -177,3 +177,25 @@ input {
     background-color: rgb(144, 238, 144);
     border-radius: 10px;
 }
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.aboutMe img {
+    width: 50%
+}
+.aboutMe p {
+    font-family: "Butterfly Kids", cursive;
+    font-size: 2.5rem;
+}
+.aboutMe .intro {
+    font-family: "Emilys Candy", serif;
+    font-size: 3rem;
+}
+.aboutMe .alt {
+    font-family: "Emilys Candy", serif;
+    font-size: 2.5rem;
+}

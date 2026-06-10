@@ -27,7 +27,7 @@ namespace MCCC.Controllers
             return View();
         }
 
-        public IActionResult AvailableNow()
+        public IActionResult AboutMe()
         {
             return View();
         }

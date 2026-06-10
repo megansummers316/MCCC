@@ -199,3 +199,23 @@ input {
     font-family: "Emilys Candy", serif;
     font-size: 2.5rem;
 }
+
+.catalogGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.catalogCard {
+    background: rgba(244, 173, 187, 0.75);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.catalogCard img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}

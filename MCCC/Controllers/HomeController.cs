@@ -40,7 +40,8 @@ namespace MCCC.Controllers
                 {
                     Name = table.Rows[i][0].ToString(),
                     Price = table.Rows[i][1].ToString(),
-                    Image = table.Rows[i][2].ToString()
+                    Image = table.Rows[i][2].ToString(),
+                    Size = table.Rows[i][3].ToString()
                 });
             }
             return View(products);

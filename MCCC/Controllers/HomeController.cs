@@ -93,7 +93,22 @@ namespace MCCC.Controllers
 
         public IActionResult Colours()
         {
-            return View();
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "Data", "colour.xlsx");
+            List<Colour> colours = new List<Colour>();
+            using var stream = System.IO.File.Open(path, FileMode.Open, FileAccess.Read);
+            using var reader = ExcelReaderFactory.CreateReader(stream);
+            var result = reader.AsDataSet();
+            DataTable table = result.Tables[0];
+            for (int i = 1; i < table.Rows.Count; i++)
+            {
+                colours.Add(new Colour
+                {
+                    Name = table.Rows[i][0].ToString(),
+                    Image = table.Rows[i][2].ToString()
+                });
+            }
+            return View(colours);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

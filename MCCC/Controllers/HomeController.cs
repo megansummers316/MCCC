@@ -95,7 +95,7 @@ namespace MCCC.Controllers
         public IActionResult Colours()
         {
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-            string path = Path.Combine(Directory.GetCurrentDirectory(), "Data", "toyColour.xlsx");
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "Data", "toyColours.xlsx");
             List<Colour> colours = new List<Colour>();
             using var stream = System.IO.File.Open(path, FileMode.Open, FileAccess.Read);
             using var reader = ExcelReaderFactory.CreateReader(stream);

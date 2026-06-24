@@ -3,7 +3,7 @@
 }
 @model List<string>
 
-<div class="text-center home">
+<div class="text-center" id="home">
     <h1 class="display-4">Handmade Crochet Creations Made with Heart</h1>
 
     <div id="itemCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -11,7 +11,7 @@
             @for (int i = 0; i < Model.Count; i++)
             {
                 <div class="carousel-item @(i == 0 ? "active" : "")">
-                    <img src="@Model[i]" class="d-block w-100" alt="Crochet Item" />
+                    <img src="@Model[i]" class="d-block mx-auto carousel-img" alt="Crochet Item" />
                 </div>
             }
         </div>
@@ -23,8 +23,8 @@
         </button>
     </div>
 
-    <h3>Browse ready-made creations or work with me to bring your own idea to life. Every piece is handcrafted with care by Meg's Cozy Crochet Crafts.</h3>
+    <h3>Browse ready-made creations or work with me to bring your own idea to life. Every piece is handcrafted with care by Meg's Cozy Crochet.</h3>
 
-    <button>Browse Catalog</button>
-    <button>Order Custom or Premade</button>
+    <a class="button" asp-area="" asp-controller="Home" asp-action="Catalog">Browse Catalog</a>
+    <a class="button" asp-area="" asp-controller="Home" asp-action="ContactMe">Order Custom or Premade</a>
 </div>

@@ -68,6 +68,36 @@ footer a {
     color: #d46a92;
 }
 
+/* HOME PAGE */
+.carousel-img {
+    max-height: 400px;
+    width: auto;
+    object-fit: contain;
+    border: 7px solid #d46a92;
+    border-radius: 10px;
+}
+#home h3 {
+    font-family: "Emilys Candy", serif;
+    font-size: 2rem;
+}
+#home .button {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 2rem;
+    border: 2px solid #d46a92;
+    background-color: rgba(244, 173, 187, 0.75);
+    border-radius: 10px;
+    padding: 7px;
+    text-decoration: none;
+    color: black;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+#home * {
+    margin: 25px;
+}
+
 /* CUSTOM ORDER PAGE */
 #homePage #homePageOne {
     width: 25%;

@@ -68,7 +68,7 @@ footer a {
     color: #d46a92;
 }
 
-/* HOME PAGE */
+/* CUSTOM ORDER PAGE */
 #homePage #homePageOne {
     width: 25%;
 }
@@ -206,6 +206,11 @@ input {
     gap: 20px;
     padding: 20px;
 }
+.catalogGrid .blurb {
+    font-family: "Emilys Candy", serif;
+    font-size: 2rem;
+    text-align: center;
+}
 .catalogCard {
     background: rgba(244, 173, 187, 0.75);
     border-radius: 12px;
@@ -226,7 +231,6 @@ input {
     gap: 20px;
     padding: 20px;
 }
-
 .colourCard {
     background: rgba(244, 173, 187, 0.75);
     border-radius: 12px;
@@ -234,7 +238,6 @@ input {
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .colourCard img {
     width: 100%;
     height: 250px;

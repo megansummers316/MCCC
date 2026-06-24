@@ -25,6 +25,11 @@ namespace MCCC.Controllers
             return View();
         }
 
+        public IActionResult CustomOrder()
+        {
+            return View();
+        }
+
         public IActionResult Catalog()
         {
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);

@@ -1,9 +1,30 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
+@model List<string>
 
 <div class="text-center home">
-    <h1 class="display-4">Welcome to Meg's Cozy Crochet Crafts</h1>
+    <h1 class="display-4">Handmade Crochet Creations Made with Heart</h1>
 
-    
+    <div id="itemCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <img src="@Model[i]" class="d-block w-100" alt="Crochet Item" />
+                </div>
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#itemCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#itemCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <h3>Browse ready-made creations or work with me to bring your own idea to life. Every piece is handcrafted with care by Meg's Cozy Crochet Crafts.</h3>
+
+    <button>Browse Catalog</button>
+    <button>Order Custom or Premade</button>
 </div>

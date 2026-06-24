@@ -22,7 +22,17 @@ namespace MCCC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var images = new List<string>
+            {
+                "/img/items/iceCreamTurtle.JPG",
+                "/img/items/giantDragon.JPG",
+                "/img/items/mollyDoll.JPG",
+                "/img/items/sleepingKirby.JPG",
+                "/img/items/emotionalDumplings.JPG",
+                "/img/items/butterflyRainbowBlanket.JPG",
+                "/img/items/applesaurus.JPG"
+            };
+            return View(images);
         }
 
         public IActionResult CustomOrder()

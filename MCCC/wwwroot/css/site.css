@@ -246,6 +246,7 @@ h1 {
     width: 50%;
     align-items: center;
     justify-self: center;
+    margin: 0 auto;
 }
 input {
     font-family: "Shadows Into Light", cursive;

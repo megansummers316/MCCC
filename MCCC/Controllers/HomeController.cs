@@ -77,7 +77,7 @@ namespace MCCC.Controllers
         {
             MailMessage message = new MailMessage();
             message.From = new MailAddress("megscozycrochetcrafts@gmail.com");
-            message.To.Add("megan.summers16@outlook.com");
+            message.To.Add("megscozycrochetcrafts@gmail.com");
             message.Subject = "New Crochet Order";
             string body = "";
             body += $"Name: {name}\n";
